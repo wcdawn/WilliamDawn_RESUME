@@ -2,3 +2,6 @@
 *.aux
 *.log
 *.out
+
+# ignore vim swap files
+*.swp
