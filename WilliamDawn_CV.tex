@@ -1,70 +1,28 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Graduate Curriculum Vitae
-% LaTeX Template
-% Version 1.1 (9/12/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
-%
-% Important note:
-% This template requires the res.cls file to be in the same directory as the
-% .tex file. The res.cls file provides the resume style used for structuring the
-% document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[letterpaper,10pt,nocolor,final]{moderncv} 
+\moderncvtheme{casual} % classic or casual
+\usepackage[utf8]{inputenc}
+\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\recomputelengths
 
-%-------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%-------------------------------------------------------------------------------
-
-% Use the res.cls style, the font size can be changed to 11pt or 12pt here
-\documentclass[margin, 10pt]{res} 
-
-\renewcommand{\familydefault}{\sfdefault}
-% Default font is the helvetica postscript font
-\usepackage{helvet} 
-% To change the default font to the new century schoolbook postscript font 
-% uncomment the line below and comment the one above
-%\usepackage{newcent} 
-
-\setlength{\textwidth}{5.1in} % Text width of the document
-
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{fontawesome}
+\usepackage{amsmath,amssymb,amsfonts}
 \usepackage{microtype}
-\usepackage{enumitem}
-\setlist{nolistsep}
-\newcommand{\backwardspace}{-8pt}
+
+\firstname{William C.}
+\familyname{Dawn}
+\title{Curriculum Vitae}
+\address{1422 Pitching Wedge Drive, Apt. 205}{27603 Raleigh, NC}
+\mobile{(540) 645-2576}
+\email{wcdawn@ncsu.edu}
+\social[github]{wcdawn}
 
 \begin{document}
-
-%-------------------------------------------------------------------------------
-%	NAME AND ADDRESS SECTION
-%-------------------------------------------------------------------------------
-
-\moveleft.5\hoffset\centerline{\large\bf William C. Dawn} % Your name at the top
-
-% Horizontal line after name; adjust line thickness by changing the '1pt'
-\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip 
- 
-\moveleft.5\hoffset\centerline{1422 Pitching Wedge Dr., Apt. 205} % Your address
-\moveleft.5\hoffset\centerline{Raleigh, NC 27603}
-\moveleft.5\hoffset\centerline{(540) 645-2576 \; $\blacklozenge$ 
-  \; wcdawn@ncsu.edu}
-
-%-------------------------------------------------------------------------------
-
-\begin{resume}
+\maketitle
 
 %-------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %-------------------------------------------------------------------------------
 
-\vspace{-12pt}
- 
 \section{EDUCATION}  
 \textbf{Graduate Student, Nuclear Engineering} \hfill 
   \textit{May 2017 - Present}\\
@@ -76,21 +34,21 @@ North Carolina State University --- Raleigh, NC \hfill GPA: 3.67
       with fully coupled thermal hydraulics and thermal expansion.
     \item M.S. expected May 2019. Ph.D. expected May 2022.
 \end{itemize}
-\vspace{\backwardspace}
+
 \textbf{B.S. Nuclear Engineering} \hfill \textit{August 2013 - May 2017} \\
 North Carolina State University --- Raleigh, NC \hfill GPA: 4.00
 \begin{itemize}
-    \item Led senior design team responsible for interfacing with corporate 
-      sponsor.
-    \item Designed thermal neutron test source and incorporated into GE's PRISM 
-      Sodium-cooled Fast Reactor (SFR) design.
+    \item Led senior design team. Responsible for project management and 
+      interfacing with corporate sponsor.
+    \item Senior Design Project: ``A Thermal Test Location in a Sodium Cooled
+      Fast Reactor.''
 \end{itemize}
 
 %-------------------------------------------------------------------------------
 %	PROFESSIONAL EXPERIENCE SECTION
 %-------------------------------------------------------------------------------
  
-\section{WORK \\ EXPERIENCE}
+\section{WORK  EXPERIENCE}
 
 \textbf{CASL Graduate Assistant}\\
 Consortium for Advanced Simulation of LWRs (CASL) \hfill \textit{August 2018}
@@ -102,7 +60,6 @@ Consortium for Advanced Simulation of LWRs (CASL) \hfill \textit{August 2018}
       NC.
 \end{itemize}
 
-\vspace{\backwardspace}
 \textbf{NESLS Engineering Intern}\\
 Oak Ridge National Laboratory --- Oak Ridge, TN \hfill 
   \textit{May 2017 - August 2017}
@@ -113,7 +70,6 @@ Oak Ridge National Laboratory --- Oak Ridge, TN \hfill
       and depletion simulations.
 \end{itemize}
 
-\vspace{\backwardspace}
 \textbf{CASL Undergraduate Scholar} \\
 Consortium for Advanced Simulation of LWRs (CASL) \hfill 
   \textit{August 2015 - May 2017}
@@ -123,7 +79,6 @@ Consortium for Advanced Simulation of LWRs (CASL) \hfill
       MPACT.
 \end{itemize}
 
-\vspace{\backwardspace}
 \textbf{Edison Engineering Intern} \\
 GE Power --- Wilmington, NC \\
 PRISM \hfill \textit{May 2016 - August 2016}
@@ -133,7 +88,6 @@ PRISM \hfill \textit{May 2016 - August 2016}
     \item Disclosed two patents relating to ESBWR and one patent related to 
       PRISM.
 \end{itemize}
-\vspace{\backwardspace}
 LOCA \& Containment \hfill \textit{May 2015 - August 2015}
 \begin{itemize}
     \item Analyzed reactor transients using TRACG to support 10\% power uprate.
@@ -141,7 +95,6 @@ LOCA \& Containment \hfill \textit{May 2015 - August 2015}
       MATLAB.
 \end{itemize}
 
-\vspace{\backwardspace}
 \textbf{Licensed Reactor Operator} \\
 NCSU PULSTAR Research Nuclear Reactor \hfill \textit{August 2014 - May 2017}
 
@@ -149,12 +102,12 @@ NCSU PULSTAR Research Nuclear Reactor \hfill \textit{August 2014 - May 2017}
 %	RELEVANT SKILLS SECTION
 %-------------------------------------------------------------------------------
 
-\section{RELEVANT \\ SKILLS}
+\section{RELEVANT  SKILLS}
 
-{\sl Programming Languages:} FORTRAN, MATLAB, Python, C++, C, \LaTeX. \\
-{\sl Simulation Packages:} DIF3D, MC\textsuperscript{2}-3, REBUS, MCNP, MPACT, 
+{Programming Languages:} FORTRAN, MATLAB, Python, C++, C, \LaTeX. \\
+{Simulation Packages:} DIF3D, MC\textsuperscript{2}-3, REBUS, MCNP, MPACT, 
   CTF. \\
-{\sl General Proficiencies:} Bash scripting, GitHub \& GitLab Project 
+{General Proficiencies:} Bash scripting, GitHub \& GitLab Project 
   Management.
 
 %-------------------------------------------------------------------------------
@@ -166,5 +119,4 @@ NCSU PULSTAR Research Nuclear Reactor \hfill \textit{August 2014 - May 2017}
 \textbf{Scholarship}, American Nuclear Society \hfill 
   \textit{May 2017 - May 2018}
 
-\end{resume}
 \end{document}

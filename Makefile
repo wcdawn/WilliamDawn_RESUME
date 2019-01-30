@@ -1,11 +1,17 @@
 # Makefile
-NAME=WilliamDawn_RESUME
+RESUME=WilliamDawn_RESUME
+CV=WilliamDawn_CV
 
-.PHONY : all resume
+.PHONY : all resume cv
 
-all : resume
+all : resume cv
 
-resume: $(NAME).pdf
+resume: $(RESUME).pdf
 
-$(NAME).pdf : $(NAME).tex res.cls
-	pdflatex $(NAME)
+cv : $(CV).pdf
+
+$(RESUME).pdf : $(RESUME).tex res.cls
+	pdflatex $(RESUME)
+
+$(CV).pdf : $(CV).tex res.cls
+	pdflatex $(CV)
