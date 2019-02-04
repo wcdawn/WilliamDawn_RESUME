@@ -1,4 +1,4 @@
-\documentclass[letterpaper,10pt,nocolor,final]{moderncv} 
+\documentclass[letterpaper,11pt,nocolor,final]{moderncv} 
 \moderncvtheme{casual} % classic or casual
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -9,6 +9,17 @@
 
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{microtype}
+
+\usepackage[
+  backend=biber,
+  style=verbose,
+  sorting=ynt,
+  url=false,
+  doi=false,
+  isbn=false,
+  maxnames=99,
+]{biblatex}
+\addbibresource{mywork.bib}
 
 \firstname{William C.}
 \familyname{Dawn}
@@ -21,6 +32,8 @@
 \begin{document}
 \maketitle
 
+\nocite{*}
+
 %-------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %-------------------------------------------------------------------------------
@@ -30,9 +43,10 @@
   \cventry{May 2019}{Master of Science, Nuclear Engineering}
     {North Carolina State University}{Raleigh, NC}{\textit{GPA: 3.67}}{
     Nuclear Engineering University Program (NEUP) Fellow \\
-    Developed simulation suite to model Sodium-cooled Fast Reactors (SFRs).\\
-    Thesis Title: ``Simulation of Fast Reactors with the Finite Element Method and
-      Multiphysics Models''}
+    Developed simulation suite to model Sodium-cooled Fast Reactors (SFRs).
+    \vspace{-1\topsep}
+    \printbibliography[keyword={mastersthesis},heading=none]}
+  \vspace{\topsep}
 
   \cventry{May 2017}{Bachelor of Science, Nuclear Engineering}
     {North Carolina State University}{Raleigh, NC}{\textit{GPA: 4.00}}{
@@ -42,78 +56,106 @@
       Reactor''}
 
 %-------------------------------------------------------------------------------
+% PUBLICATION SECTION
+%-------------------------------------------------------------------------------
+
+\section{Publications}
+  \printbibliography[keyword={publications},heading=none]
+
+
+%-------------------------------------------------------------------------------
+% PATENTS SECTION
+%-------------------------------------------------------------------------------
+
+\section{Patents}
+  \printbibliography[keyword={patents},heading=none]
+
+%-------------------------------------------------------------------------------
+% CONFERENCE PRESENTATIONS SECTION
+%-------------------------------------------------------------------------------
+
+\section{Conference Presentations}
+  \printbibliography[keyword={conferencepresentations},heading=none]
+
+%-------------------------------------------------------------------------------
 %	PROFESSIONAL EXPERIENCE SECTION
 %-------------------------------------------------------------------------------
  
-\section{Work Experience}
+\section{Professional Experience}
 
-\textbf{CASL Graduate Assistant}\\
-Consortium for Advanced Simulation of LWRs (CASL) \hfill \textit{August 2018}
-\begin{itemize}
+\cventry{August 2018}{CASL Graduate Assistant}{Consortium for Advanced
+  Simulation of LWRs (CASL)}{Raleigh, NC}{}{
+  \begin{itemize}
     \item Lectured on CTF--MPACT coupling and use for practical reactor designs.
     \item Provided technical and IT support for student reactor design 
       simulations.
-    \item Contributed to logistical planning for 2018 CASL Institute in Raleigh,
-      NC.
-\end{itemize}
+    \item Contributed to logistical planning for 2018 CASL Institute.
+  \end{itemize}}
 
-\textbf{NESLS Engineering Intern}\\
-Oak Ridge National Laboratory --- Oak Ridge, TN \hfill 
-  \textit{May 2017 - August 2017}
-\begin{itemize}
+\cventry{May 2017 - August 2017}{NESLS Engineering Intern}{Oak Ridge National
+Laboratory}{Oak Ridge, TN}{}{
+  \begin{itemize}
     \item Added fast neutron cross section library capabilities to MPACT neutron 
       transport code via ISOTXS file reader.
     \item Simulated fast-neutron chloride molten-salt reactor in steady-state 
       and depletion simulations.
-\end{itemize}
+  \end{itemize}}
 
-\textbf{CASL Undergraduate Scholar} \\
-Consortium for Advanced Simulation of LWRs (CASL) \hfill 
-  \textit{August 2015 - May 2017}
-\begin{itemize}
+\cventry{August 2015 - May 2017}{CASL Undergraduate Scholar}{Consortium for
+Advanced Simulation of LWRs (CASL)}{Raleigh, NC}{}{
+  \begin{itemize}
     \item Reduced computing time by 30\% by improving steam tables in COBRA-TF.
     \item Performed code comparisons to verify simulation results in MCNP and 
       MPACT.
-\end{itemize}
+  \end{itemize}}
 
-\textbf{Edison Engineering Intern} \\
-GE Power --- Wilmington, NC \\
-PRISM \hfill \textit{May 2016 - August 2016}
-\begin{itemize}
+\cventry{May 2016 - August 2016 \\ \vspace{\topsep} May 2015 - August 2015}
+{Edison Engineering Intern}{GE Power}{Wilmington, NC}{}{
+  PRISM 
+  \begin{itemize}
     \item Acknowledged contributor on journal articles 
       ``PRISM Reference Fuel Design.''
     \item Disclosed two patents relating to ESBWR and one patent related to 
       PRISM.
-\end{itemize}
-LOCA \& Containment \hfill \textit{May 2015 - August 2015}
-\begin{itemize}
+  \end{itemize}
+  LOCA \& Containment \hfill \textit{May 2015 - August 2015}
+  \begin{itemize}
     \item Analyzed reactor transients using TRACG to support 10\% power uprate.
     \item Created automated data visualization and animation packages using 
       MATLAB.
-\end{itemize}
+  \end{itemize}}
 
-\textbf{Licensed Reactor Operator} \\
-NCSU PULSTAR Research Nuclear Reactor \hfill \textit{August 2014 - May 2017}
-
-%-------------------------------------------------------------------------------
-%	RELEVANT SKILLS SECTION
-%-------------------------------------------------------------------------------
-
-\section{RELEVANT  SKILLS}
-
-{Programming Languages:} FORTRAN, MATLAB, Python, C++, C, \LaTeX. \\
-{Simulation Packages:} DIF3D, MC\textsuperscript{2}-3, REBUS, MCNP, MPACT, 
-  CTF. \\
-{General Proficiencies:} Bash scripting, GitHub \& GitLab Project 
-  Management.
+\cventry{August 2014 - May 2017}{Licensed Reactor Operator}{NC State PULSTAR
+Research Nuclear Reactor}{Raleigh, NC}{}{
+  \begin{itemize}
+    \item Licensed by NRC to operate all controls at NCSU reactor facility.
+    \item Experienced in startup, operation, and troubleshooting on 1 MW
+      research reactor.
+  \end{itemize}}
 
 %-------------------------------------------------------------------------------
-%	AWARDS SECTION
+%	TECHNICAL SKILLS SECTION
 %-------------------------------------------------------------------------------
-\section{AWARDS}
-\textbf{Fellow}, Nuclear Engineering University Program (NEUP) \hfill 
-  \textit{May 2017 - Present} \\
-\textbf{Scholarship}, American Nuclear Society \hfill 
-  \textit{May 2017 - May 2018}
+
+\section{Technical Skills}
+
+\cvcomputer{Programming Languages}{FORTRAN, MATLAB, Python,\\
+  C++, C, \LaTeX.}
+{Simulation Packages:}{DIF3D, MC\textsuperscript{2}-3, REBUS, MCNP, \\
+  MPACT, CTF}
+\cvcomputer{General Proficiencies}{Bash scripting, Github \& GitLab Project
+Management}{}{}
+
+%-------------------------------------------------------------------------------
+%	PROFESSIONAL DEVELOPMENT AND ACHIEVMENTS SECTION
+%-------------------------------------------------------------------------------
+
+\section{Professional Development and Achievements}
+
+  \cvline{2017-2020}{Nuclear Engineering University Program (NEUP).}
+  \cvlistitem{Full funding toward Ph.D.}
+  \cvlistitem{Three years.}
+
+  \cvline{2017-2018}{American Nuclear Society Scholarship.}
 
 \end{document}

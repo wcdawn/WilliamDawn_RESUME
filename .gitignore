@@ -3,5 +3,11 @@
 *.log
 *.out
 
+# ignore bibliography files
+*.bbl
+*.bcf
+*.blg
+*.xml
+
 # ignore vim swap files
 *.swp
